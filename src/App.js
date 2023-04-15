@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Item from "./components/Item";
+import Basket from "./components/Basket";
+import Footer from "./components/Footer";
 
 function App() {
+  function handleClick(e) {
+    const item = e.target.dataset.value;
+    alert(`You added one ${item.toLowerCase()} to your basket.`);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <p className="App-text">Buy items:</p>
+      <Item name="Egg" whenClicked={handleClick} />
+      <Item name="Strawberry" whenClicked={handleClick} />
+      <Item name="Banana" whenClicked={handleClick} />
+      <Item name="Bread Slice" whenClicked={handleClick} />
+      <Basket />
+      <Footer />
     </div>
   );
 }
