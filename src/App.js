@@ -18,22 +18,27 @@ export default function App() {
 
     setTotal((prevTotal) => prevTotal + newItem.price);
 
-    const itemInBasket = basket.find((item) => item.name === newItem.name);
-
+    let updatedBasket = basket;
+    const itemInBasket = updatedBasket.find(
+      (item) => item.name === newItem.name
+    );
     if (itemInBasket) {
-      const i = basket.indexOf(itemInBasket);
-      newItem.quantity = basket[i].quantity + 1;
-      const updatedBasket = basket.filter((item) => item.name !== newItem.name);
-      setBasket([...updatedBasket, newItem]);
-      return;
+      const i = updatedBasket.indexOf(itemInBasket);
+      newItem.quantity = updatedBasket[i].quantity + 1;
+      updatedBasket = updatedBasket.filter(
+        (item) => item.name !== newItem.name
+      );
     }
 
-    setBasket((oldBasket) => [...oldBasket, newItem]);
+    setBasket([...updatedBasket, newItem]);
   };
 
   const checkOut = () => {
-    if (total > 0)
+    if (total > 0) {
       alert(`That will be £${(total / 100).toFixed(2)}. Have a nice day!`);
+      setBasket([]);
+      setTotal(0);
+    }
   };
 
   return (
