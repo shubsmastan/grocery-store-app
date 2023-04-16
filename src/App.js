@@ -5,25 +5,30 @@ import Basket from "./components/Basket";
 import Footer from "./components/Footer";
 import { stock } from "./utils/stock";
 
-function App() {
+export default function App() {
   const [basket, setBasket] = useState([]);
   const [total, setTotal] = useState(0);
 
   const handleClick = (e) => {
-    const selectedItem = e.target.dataset.value;
-    const selectedItemPrice = parseInt(e.target.dataset.price);
-    setTotal(total + selectedItemPrice);
-    for (const item of basket) {
-      if (item.name === selectedItem) {
-        item.quantity += 1;
-        setBasket([...basket]);
-        return;
-      }
+    const newItem = {
+      name: e.target.dataset.value,
+      quantity: 1,
+      price: parseInt(e.target.dataset.price),
+    };
+
+    setTotal((prevTotal) => prevTotal + newItem.price);
+
+    const itemInBasket = basket.find((item) => item.name === newItem.name);
+
+    if (itemInBasket) {
+      const i = basket.indexOf(itemInBasket);
+      newItem.quantity = basket[i].quantity + 1;
+      const updatedBasket = basket.filter((item) => item.name !== newItem.name);
+      setBasket([...updatedBasket, newItem]);
+      return;
     }
-    setBasket([
-      ...basket,
-      { name: selectedItem, quantity: 1, price: selectedItemPrice },
-    ]);
+
+    setBasket((oldBasket) => [...oldBasket, newItem]);
   };
 
   const checkOut = () => {
@@ -50,5 +55,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
