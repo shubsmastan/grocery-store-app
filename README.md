@@ -8,7 +8,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Description
 
-This is an app created using React.js which allows emulates a simple shopping cart. It was an assignment created as part of the full-stack JavaScript pathway on [The Odin Project](https://www.theodinproject.com/).
+This is an app created using React.js which emulates a simple shopping cart. It was an assignment created as part of the full-stack JavaScript pathway on [The Odin Project](https://www.theodinproject.com/).
 
 ## How It Was Made
 
