@@ -5,6 +5,7 @@ export default function Item(props) {
     <button
       className="App-button"
       data-value={props.name}
+      data-price={props.price}
       onClick={props.whenClicked}
     >
       {props.name}
