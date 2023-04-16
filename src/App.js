@@ -18,19 +18,16 @@ export default function App() {
 
     setTotal((prevTotal) => prevTotal + newItem.price);
 
-    let updatedBasket = basket;
-    const itemInBasket = updatedBasket.find(
-      (item) => item.name === newItem.name
-    );
+    const itemInBasket = basket.find((item) => item.name === newItem.name);
     if (itemInBasket) {
-      const i = updatedBasket.indexOf(itemInBasket);
-      newItem.quantity = updatedBasket[i].quantity + 1;
-      updatedBasket = updatedBasket.filter(
-        (item) => item.name !== newItem.name
+      const i = basket.indexOf(itemInBasket);
+      newItem.quantity = basket[i].quantity + 1;
+      setBasket((oldBasket) =>
+        oldBasket.filter((item) => item.name !== newItem.name)
       );
     }
 
-    setBasket([...updatedBasket, newItem]);
+    setBasket((oldBasket) => [...oldBasket, newItem]);
   };
 
   const checkOut = () => {
