@@ -1,7 +1,5 @@
 # Grocery Store App with Create React App
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/394073d0-aec9-4d60-a37f-5ab8d8db33ef/deploy-status)](https://app.netlify.com/sites/mellow-brigadeiros-b22069/deploys)<br />
-
 [Live preview](https://shubsmastan-grocery-store-app.netlify.app/)<br />
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
