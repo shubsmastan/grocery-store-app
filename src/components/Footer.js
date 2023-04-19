@@ -1,26 +1,28 @@
 import React from "react";
-import ReactLogo from "../images/react.png";
-import GitHubLogo from "../images/github.png";
+import reactLogo from "../images/react.png";
+import githubLogo from "../images/github.png";
 
 export default function Footer() {
   return (
-    <footer className="App-footer">
-      <p className="App-footer-text">
+    <footer>
+      <p>
         Made using{" "}
-        <a className="App-link" href="https://react.dev/">
+        <a className="App-link" href="https://react.dev/" target="_blank">
           React
         </a>
+        &nbsp;
+        <a href="https://react.dev/" target="_blank">
+          <img src={reactLogo} alt="React logo" />
+        </a>
       </p>
-      <a href="https://react.dev/">
-        <img className="App-logo" src={ReactLogo} alt="React logo" />
-      </a>
-      <a className="App-link" href="https://www.github.com/shubsmastan">
-        <img className="App-logo" src={GitHubLogo} alt="GitHub logo" />
-      </a>
-      <p className="App-footer-text">
+      <p>
         by{" "}
-        <a className="App-link" href="https://www.github.com/shubsmastan">
+        <a href="https://www.github.com/shubsmastan" target="_blank">
           ShubsMastan
+        </a>{" "}
+        &nbsp;
+        <a href="https://www.github.com/shubsmastan" target="_blank">
+          <img src={githubLogo} alt="GitHub logo" />
         </a>
       </p>
     </footer>

@@ -1,0 +1,32 @@
+.home {
+  text-align: center;
+}
+
+.home-img {
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+}
+
+.small-subheading {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  color: rgb(145, 175, 190);
+}
+
+.shop-btn {
+  display: block;
+  margin: auto;
+  padding: 10px 20px;
+  border: none;
+  background-color: black;
+  border-radius: 50px;
+  color: #fff;
+}
+
+@media (min-width: 600px) {
+  .home-img {
+    max-width: 500px;
+  }
+}
