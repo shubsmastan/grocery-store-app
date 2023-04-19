@@ -2,7 +2,7 @@
 
 [Live preview](https://shubsmastan-grocery-store-app.netlify.app/)<br />
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was created with [React](https://react.dev/).
 
 ## Description
 
@@ -10,8 +10,8 @@ This is an app created using React.js which emulates a simple shopping cart. It 
 
 ## How It Was Made
 
-- I intitialised the app with create-react-app.
-- I learnt how to use the useState hooks to update the shopping basket.
+- I learnt how to use the hooks in react to update the shopping basket.
+- I learnt how to use routes to create a seemless path through the app.
 - I used Git to take regular snapshots and maintain a good workflow.
 
 ## Author
@@ -20,6 +20,8 @@ This is an app created using React.js which emulates a simple shopping cart. It 
 
 ## Version History
 
+- 1.0.1 (20/04/2023)
+  - Added more pages and routes between them
 - 1.0 (16/04/2023)
   - Initial release
 
