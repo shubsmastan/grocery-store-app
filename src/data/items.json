@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Egg",
+    "price": 30,
+    "img": "/images/eggs.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Strawberry",
+    "price": 50,
+    "img": "/images/strawberries.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Banana",
+    "price": 15,
+    "img": "/images/banana.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Bread",
+    "price": 20,
+    "img": "/images/bread.jpg"
+  }
+]
