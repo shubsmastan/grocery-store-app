@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import { Container } from "react-bootstrap";
 import Home from "./pages/Home";
@@ -7,9 +8,12 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 
 export default function App() {
+  const [shoppingCart, setShoppingCart] = useState([]);
+  const [totalItems, setTotalItems] = useState(0);
+
   return (
     <>
-      <Header />
+      <Header totalItems={totalItems} />
       <Container className="mb-4">
         <Routes>
           <Route path="/" element={<Home />}></Route>

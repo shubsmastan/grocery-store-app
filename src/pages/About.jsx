@@ -3,7 +3,7 @@ import { Button } from "react-bootstrap";
 export default function About() {
   return (
     <main>
-      <h2 style={{ fontFamily: "'Rubik Mono One', sans-serif" }}>About Us</h2>
+      <h2>About Us</h2>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis
         cupiditate minima, excepturi porro quod, tenetur illo explicabo quia
@@ -12,14 +12,6 @@ export default function About() {
         magnam. Enim eius facere praesentium. Voluptates voluptatum incidunt
         error similique optio quam hic sequi!
       </p>
-      <div className="text-center">
-        {/* <img
-          src={groceries}
-          alt="Groceries laid out on a bed"
-          className="rounded img-fluid mx-auto mb-4"
-          style={{ maxHeight: "400px" }}
-        /> */}
-      </div>
       <Button
         variant="dark"
         style={{

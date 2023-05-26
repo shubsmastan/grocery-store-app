@@ -4,12 +4,12 @@ import githubLogo from "/images/github.png";
 export default function Footer() {
   return (
     <footer
-      className="text-light d-flex gap-1 justify-content-center flex-column flex-sm-row align-items-center p-2"
-      style={{ backgroundColor: "#212A3E" }}
+      className="text-light d-flex gap-1 justify-content-center flex-column flex-sm-row align-items-center p-4"
+      style={{ backgroundColor: "#415257" }}
     >
       <p className="mb-0">
         Made using{" "}
-        <a className="text-light" href="https://react.dev/" target="_blank">
+        <a className="link-light" href="https://react.dev/" target="_blank">
           React
         </a>
         &nbsp;
@@ -24,7 +24,7 @@ export default function Footer() {
       <p className="mb-0">
         by{" "}
         <a
-          className="text-light"
+          className="link-light "
           href="https://www.github.com/shubsmastan"
           target="_blank"
         >

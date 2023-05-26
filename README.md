@@ -13,6 +13,7 @@ This is an app created using React.js which emulates a simple shopping cart. It 
 - I learnt how to use the hooks in react to update the shopping basket.
 - I learnt how to use routes to create a seemless path through the app.
 - I used Git to take regular snapshots and maintain a good workflow.
+- I used Bootstrap to style the elements like the cards and header.
 
 ## Author
 

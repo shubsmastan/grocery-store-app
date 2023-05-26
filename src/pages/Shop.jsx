@@ -5,7 +5,7 @@ import items from "../data/items.json";
 export default function Shop() {
   return (
     <main>
-      <h2 style={{ fontFamily: "'Rubik Mono One', sans-serif" }}>Buy items</h2>
+      <h2>Buy items</h2>
       <Row xs={1} md={2} lg={3} className="g-3">
         {items.map((item) => (
           <Col key={item.id}>
