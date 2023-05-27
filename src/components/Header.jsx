@@ -1,9 +1,11 @@
+import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import { Navbar, Nav, Button, Container } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
-export default function Header({ totalItems }) {
+export default function Header() {
+  const { totalItems } = useSelector((state) => state.shoppingCart);
   return (
     <Navbar
       className="shadow-sm mb-3 p-4 text-white navbar-dark"
@@ -31,36 +33,39 @@ export default function Header({ totalItems }) {
             </Nav.Link>
           </Nav>
         </div>
-        <Button
-          variant="outline-info"
-          className="basket"
-          style={{
-            width: "3.5rem",
-            height: "3.5rem",
-            border: "none",
-            position: "relative",
-            color: "white",
-          }}
-          onClick={() => alert("Hello")}
-        >
-          <FontAwesomeIcon icon={faCartShopping} size="2xl" />
-          {totalItems === 0 ? (
-            <></>
-          ) : (
-            <div
-              className="rounded-circle bg-danger d-flex justify-content-center align-items-center text-light"
-              style={{
-                width: "1.2rem",
-                height: "1.2rem",
-                position: "absolute",
-                bottom: "3px",
-                right: "3px",
-              }}
-            >
-              {totalItems}
-            </div>
-          )}
-        </Button>
+
+        <NavLink as={NavLink} to="/basket">
+          <Button
+            variant="outline-info"
+            className="basket"
+            style={{
+              width: "3.5rem",
+              height: "3.5rem",
+              border: "none",
+              position: "relative",
+              color: "white",
+            }}
+          >
+            <FontAwesomeIcon icon={faCartShopping} size="xl" />
+            {totalItems === 0 ? (
+              <></>
+            ) : (
+              <div
+                className="rounded-circle d-flex justify-content-center align-items-center text-light"
+                style={{
+                  width: "1.2rem",
+                  height: "1.2rem",
+                  position: "absolute",
+                  bottom: "3px",
+                  right: "3px",
+                  backgroundColor: "#7c959c",
+                }}
+              >
+                {totalItems}
+              </div>
+            )}
+          </Button>
+        </NavLink>
       </Container>
     </Navbar>
   );
