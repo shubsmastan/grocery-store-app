@@ -1,42 +1,32 @@
-import reactLogo from "/images/react.png";
-import githubLogo from "/images/github.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faReact } from "@fortawesome/free-brands-svg-icons";
+import { faCircle } from "@fortawesome/free-solid-svg-icons";
 
 export default function Footer() {
   return (
     <footer
-      className="text-light d-flex gap-1 justify-content-center flex-column flex-sm-row align-items-center p-4"
-      style={{ backgroundColor: "#415257" }}
+      className="d-flex gap-2 justify-content-center align-items-center p-1"
+      style={{ fontSize: "12px" }}
     >
       <p className="mb-0">
-        Made using{" "}
-        <a className="link-light" href="https://react.dev/" target="_blank">
-          React
-        </a>
-        &nbsp;
-        <a href="https://react.dev/" target="_blank">
-          <img
-            src={reactLogo}
-            alt="React logo"
-            style={{ height: "1.5rem", width: "1.5rem" }}
-          />
+        &copy; 2023{" "}
+        <a className="link-secondary" href="https://mastan.me">
+          ShubsMastan
         </a>
       </p>
+      <FontAwesomeIcon icon={faCircle} width="4px" />
+      <FontAwesomeIcon icon={faGithub} size="lg" />
       <p className="mb-0">
-        by{" "}
-        <a
-          className="link-light "
-          href="https://www.github.com/shubsmastan"
-          target="_blank"
-        >
-          ShubsMastan
-        </a>{" "}
-        &nbsp;
-        <a href="https://www.github.com/shubsmastan" target="_blank">
-          <img
-            src={githubLogo}
-            alt="GitHub logo"
-            style={{ height: "1.5rem", width: "1.5rem" }}
-          />
+        <a className="link-secondary" href="https://github.com/shubsmastan">
+          GitHub
+        </a>
+      </p>
+      <FontAwesomeIcon icon={faCircle} width="4px" />
+      <FontAwesomeIcon icon={faReact} size="lg" />
+      <p className="mb-0">
+        <a className="link-secondary" href="https://react.dev">
+          React
         </a>
       </p>
     </footer>
