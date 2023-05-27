@@ -25,7 +25,7 @@ export default function App() {
       <main
         className="pt-4"
         style={{
-          background: `linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url(${Wallpaper})`,
+          flex: "1 1 auto",
         }}
       >
         <Container className="mb-4">
@@ -36,8 +36,8 @@ export default function App() {
             <Route path="/basket" element={<Basket />}></Route>
           </Routes>
         </Container>
-        <Footer />
       </main>
+      <Footer />
     </>
   );
 }

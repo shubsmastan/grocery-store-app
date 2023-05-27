@@ -10,7 +10,7 @@ export default function Header() {
   return (
     <Navbar
       className="shadow-sm p-4 text-white navbar-dark"
-      style={{ backgroundColor: "#415257" }}
+      style={{ backgroundColor: "#415257", flex: "flex: 0 1 auto" }}
     >
       <Container className="p-0">
         <div

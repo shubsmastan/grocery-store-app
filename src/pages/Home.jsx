@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
-import { Container, Button } from "react-bootstrap";
-import Footer from "../components/Footer";
+import { Button } from "react-bootstrap";
 import Groceries from "/images/groceries.jpg";
 import Delivery from "/images/delivery.jpg";
 import Supermarket from "/images/supermarket.jpg";

@@ -1,6 +1,5 @@
 import { useSelector } from "react-redux";
-import { Container, Row, Col } from "react-bootstrap";
-import Footer from "../components/Footer";
+import { Row, Col } from "react-bootstrap";
 import ShopItem from "../components/ShopItem";
 import data from "../data/data.json";
 

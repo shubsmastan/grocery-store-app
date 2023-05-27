@@ -1,4 +1,5 @@
 import BasketItem from "../components/BasketItem";
+import Checkout from "../components/Checkout";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { clearItems } from "../store/shoppingCartSlice";
@@ -41,20 +42,7 @@ export default function Basket() {
               >
                 Remove All
               </Button>
-              <Button
-                variant="secondary"
-                className="d-block"
-                onClick={() => {
-                  alert(
-                    `That will be £${(totalCost / 100).toFixed(
-                      2
-                    )}. Have a nice day!`
-                  );
-                  dispatch(clearItems());
-                }}
-              >
-                Checkout
-              </Button>
+              <Checkout total={totalCost} />
             </div>
           </>
         ) : (
