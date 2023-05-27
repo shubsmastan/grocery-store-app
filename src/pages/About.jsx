@@ -7,7 +7,7 @@ export default function About() {
   return (
     <>
       <h2 className="mb-4">About Us</h2>
-      <p>
+      <p className="mb-5">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis
         cupiditate minima, excepturi porro quod, tenetur illo explicabo quia
         eveniet tempore, atque molestias fugiat obcaecati deleniti quos officiis
@@ -15,7 +15,7 @@ export default function About() {
         magnam. Enim eius facere praesentium. Voluptates voluptatum incidunt
         error similique optio quam hic sequi!
       </p>
-      <div className="d-flex flex-column flex-md-row justify-content-around my-5 text-center">
+      <div className="d-flex flex-column flex-md-row justify-content-around my-4 text-center gap-5">
         <div>
           <img src={Food} width="200px" className="mb-4" />
           <p className="mb-0">

@@ -21,7 +21,7 @@ export default function Header() {
             <img src={ShopprLogo} alt="" width="100px" />
           </Nav.Link>
           <Nav
-            className="flex align-items-center justify-content-evenly gap-4 gap-sm-5 justify-content-sm-start"
+            className="flex align-items-center justify-content-center gap-4 gap-sm-5 justify-content-sm-start"
             style={{ width: "100%" }}
           >
             <Nav.Link className="p-0 fs-5" as={NavLink} to="/">

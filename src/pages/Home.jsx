@@ -7,6 +7,7 @@ import Supermarket from "/images/supermarket.jpg";
 export default function Home() {
   return (
     <>
+      <h2 className="mb-4">Groceries Delivered To Your Door</h2>
       <div className="d-flex flex-column flex-md-row gap-md-5 justify-content-center align-items-center mb-3">
         <div className="flex-fill">
           <img
