@@ -9,6 +9,7 @@ import Shop from "./pages/Shop";
 import About from "./pages/About";
 import Basket from "./pages/Basket";
 import Footer from "./components/Footer";
+import Wallpaper from "/images/fruit-wallpaper.jpg";
 
 export default function App() {
   const { items } = useSelector((state) => state.shoppingCart);
@@ -21,15 +22,22 @@ export default function App() {
   return (
     <>
       <Header />
-      <Container className="mb-4">
-        <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/shop" element={<Shop />}></Route>
-          <Route path="/about" element={<About />}></Route>
-          <Route path="/basket" element={<Basket />}></Route>
-        </Routes>
-      </Container>
-      <Footer />
+      <main
+        className="pt-4"
+        style={{
+          background: `linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url(${Wallpaper})`,
+        }}
+      >
+        <Container className="mb-4">
+          <Routes>
+            <Route path="/" element={<Home />}></Route>
+            <Route path="/shop" element={<Shop />}></Route>
+            <Route path="/about" element={<About />}></Route>
+            <Route path="/basket" element={<Basket />}></Route>
+          </Routes>
+        </Container>
+        <Footer />
+      </main>
     </>
   );
 }

@@ -32,4 +32,7 @@ This project is licensed under the MIT License - see the LICENSE.md file for det
 
 ## Acknowledgments
 
-This project was one of the assignments on [The Odin Project](https://www.theodinproject.com)'s JavaScript pathway. It was highly educational and I recommend The Odin Project to anyone who wants to learn full-stack web development. [Basket icon by Dryicons](https://dryicons.com/free-icons/basket).
+This project was one of the assignments on [The Odin Project](https://www.theodinproject.com)'s JavaScript pathway. It was highly educational and I recommend The Odin Project to anyone who wants to learn full-stack web development.
+
+- [Basket icon by Dryicons](https://dryicons.com/free-icons/basket)
+- [Grocery icons from Flaticon](https://www.flaticon.com/free-icons/grocery)
