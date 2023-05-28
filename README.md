@@ -1,4 +1,4 @@
-# Grocery Store App with Create React App
+# Grocery Store App Clone
 
 [Live preview](https://shubsmastan-grocery-store-app.netlify.app/)<br />
 
@@ -10,10 +10,11 @@ This is an app created using React.js which emulates a simple shopping cart. It 
 
 ## How It Was Made
 
-- I learnt how to use the hooks in react to update the shopping basket.
-- I learnt how to use routes to create a seemless path through the app.
-- I used Git to take regular snapshots and maintain a good workflow.
-- I used Bootstrap to style the elements like the cards and header.
+- Using state hooks to conditionally render items in React.
+- Using React Router to create routes to different pages of the app.
+- Using Git to take regular snapshots and maintain a good workflow.
+- Using Bootstrap to style the elements such as cards and header and use modals.
+- Using Redux to manage the state throughout the app (2.0.1 update).
 
 ## Author
 
@@ -21,6 +22,8 @@ This is an app created using React.js which emulates a simple shopping cart. It 
 
 ## Version History
 
+- 2.0.1 (28/05/2023)
+  - Fully updated UI and use Redux for state management
 - 1.0.1 (20/04/2023)
   - Added more pages and routes between them
 - 1.0 (16/04/2023)
@@ -36,3 +39,4 @@ This project was one of the assignments on [The Odin Project](https://www.theodi
 
 - [Basket icon by Dryicons](https://dryicons.com/free-icons/basket)
 - [Grocery icons from Flaticon](https://www.flaticon.com/free-icons/grocery)
+- [Images from Unsplash](https://www.unsplash.com)
