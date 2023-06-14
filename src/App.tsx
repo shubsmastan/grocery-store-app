@@ -9,10 +9,10 @@ import Shop from "./pages/Shop";
 import About from "./pages/About";
 import Basket from "./pages/Basket";
 import Footer from "./components/Footer";
-import Wallpaper from "/images/fruit-wallpaper.jpg";
+import { RootState } from "./store/store";
 
 export default function App() {
-  const { items } = useSelector((state) => state.shoppingCart);
+  const { items } = useSelector((state: RootState) => state.shoppingCart);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -26,8 +26,7 @@ export default function App() {
         className="pt-4"
         style={{
           flex: "1 1 auto",
-        }}
-      >
+        }}>
         <Container className="mb-4">
           <Routes>
             <Route path="/" element={<Home />}></Route>

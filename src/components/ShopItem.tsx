@@ -4,7 +4,17 @@ import { Card, Button } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCirclePlus, faCircleMinus } from "@fortawesome/free-solid-svg-icons";
 
-export default function Item({ item, quantity }) {
+interface ShopItemProps {
+  item: {
+    id: number;
+    name: string;
+    price: number;
+    img: string;
+  };
+  quantity: number;
+}
+
+export default function Item({ item, quantity }: ShopItemProps) {
   const { id, name, price, img } = item;
   const dispatch = useDispatch();
 
@@ -26,8 +36,7 @@ export default function Item({ item, quantity }) {
         variant="top"
         src={img}
         height="200px"
-        style={{ objectFit: "cover" }}
-      ></Card.Img>
+        style={{ objectFit: "cover" }}></Card.Img>
       <Card.Body className="d-flex flex-column">
         <Card.Title className="d-flex justify-content-between align-items-baseline mb-0">
           <p>{name}</p>
@@ -40,8 +49,7 @@ export default function Item({ item, quantity }) {
               className="w-100"
               onClick={() =>
                 dispatch(changeItem({ id: id, quantity: 1, price: price }))
-              }
-            >
+              }>
               Add to cart
             </Button>
           ) : (
@@ -68,8 +76,7 @@ export default function Item({ item, quantity }) {
               <Button
                 variant="outline-danger"
                 size="sm"
-                onClick={() => dispatch(removeItem(id))}
-              >
+                onClick={() => dispatch(removeItem(id))}>
                 Remove
               </Button>
             </div>

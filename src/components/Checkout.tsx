@@ -4,7 +4,11 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import { clearItems } from "../store/shoppingCartSlice";
 
-export default function Checkout({ total }) {
+interface CheckoutComponentProps {
+  total: number;
+}
+
+export default function Checkout({ total }: CheckoutComponentProps) {
   const dispatch = useDispatch();
   const [show, setShow] = useState(false);
 
@@ -30,8 +34,7 @@ export default function Checkout({ total }) {
             onClick={() => {
               dispatch(clearItems());
               handleClose();
-            }}
-          >
+            }}>
             Close
           </Button>
         </Modal.Footer>

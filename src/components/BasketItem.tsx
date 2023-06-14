@@ -4,15 +4,24 @@ import { Card, Button } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp, faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
-export default function BasketItem({ item, quantity }) {
+interface BasketItemProps {
+  item: {
+    id: number;
+    name: string;
+    price: number;
+    img: string;
+  };
+  quantity: number;
+}
+
+export default function BasketItem({ item, quantity }: BasketItemProps) {
   const { id, name, price, img } = item;
   const dispatch = useDispatch();
 
   return (
     <Card
       className="mb-3 p-3 p-md-4"
-      style={{ background: "rgb(255, 255, 255, 0.5)" }}
-    >
+      style={{ background: "rgb(255, 255, 255, 0.5)" }}>
       <div className="d-flex justify-content-between">
         <div className="d-flex flex-column flex-lg-row gap-lg-5 align-items-lg-center">
           <img src={img} width="200px" height="auto" className="rounded mb-2" />
@@ -28,8 +37,7 @@ export default function BasketItem({ item, quantity }) {
             variant="outline-danger"
             className="d-block mb-3 px-2 pt-0 pb-1 fs-5"
             size="sm"
-            onClick={() => dispatch(removeItem(id))}
-          >
+            onClick={() => dispatch(removeItem(id))}>
             &times;
           </Button>
           <FontAwesomeIcon

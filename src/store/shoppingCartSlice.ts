@@ -1,7 +1,28 @@
 import { createSlice } from "@reduxjs/toolkit";
 import data from "../data/data.json";
 
-const initialState = {
+export type CartItem = {
+  id: number;
+  name: string;
+  price: number;
+  img: string;
+  quantity: number;
+};
+
+type Item = {
+  id: number;
+  name: string;
+  price: number;
+  img: string;
+};
+
+type StoreState = {
+  items: CartItem[];
+  totalItems: number;
+  totalCost: number;
+};
+
+const initialState: StoreState = {
   items: [],
   totalItems: 0,
   totalCost: 0,
@@ -12,17 +33,18 @@ const shoppingCartSlice = createSlice({
   initialState,
   reducers: {
     changeItem: (state, { payload }) => {
-      if (state.items.find((item) => item.id === payload.id)) {
-        let item = state.items.find((item) => item.id === payload.id);
-        item.quantity += payload.quantity;
+      const itemInCart = state.items.find((item) => item.id === payload.id);
+      if (itemInCart) {
+        itemInCart.quantity += payload.quantity;
         return;
       }
-      let item = data.find((item) => item.id === payload.id);
-      item = { ...item, quantity: 1 };
-      state.items = [item, ...state.items];
+      const itemInData: Item = data.find(
+        (item) => item.id === payload.id
+      ) as Item;
+      const itemWithQuantity = { ...itemInData, quantity: 1 };
+      state.items = [itemWithQuantity, ...state.items];
     },
     removeItem: (state, { payload }) => {
-      let item = state.items.find((item) => item.id === payload);
       state.items = state.items.filter((item) => item.id !== payload);
     },
     clearItems: (state) => {
