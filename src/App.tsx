@@ -17,7 +17,7 @@ export default function App() {
 
   useEffect(() => {
     dispatch(calculateTotals());
-  }, [dispatch, items]);
+  }, [items, dispatch]);
 
   return (
     <>
