@@ -75,18 +75,17 @@ export default function Home() {
           </p>
         </div>
       </div>
-      <Button
-        variant="outline-secondary"
-        as={Link}
-        to="/shop"
-        style={{
-          display: "block",
-          maxWidth: "120px",
-          margin: "auto",
-        }}
-      >
-        Shop now
-      </Button>
+      <Link to="/shop" style={{ textDecoration: "none" }}>
+        <Button
+          variant="outline-secondary"
+          style={{
+            display: "block",
+            maxWidth: "120px",
+            margin: "auto",
+          }}>
+          Shop now
+        </Button>
+      </Link>
     </>
   );
 }

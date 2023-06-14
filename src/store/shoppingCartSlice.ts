@@ -1,19 +1,19 @@
 import { createSlice } from "@reduxjs/toolkit";
 import data from "../data/data.json";
 
-export type CartItem = {
+export type Item = {
+  id: number;
+  name: string;
+  price: number;
+  img: string;
+};
+
+type CartItem = {
   id: number;
   name: string;
   price: number;
   img: string;
   quantity: number;
-};
-
-type Item = {
-  id: number;
-  name: string;
-  price: number;
-  img: string;
 };
 
 type StoreState = {

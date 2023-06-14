@@ -1,16 +1,11 @@
 import { useDispatch } from "react-redux";
-import { changeItem, removeItem } from "../store/shoppingCartSlice";
+import { Item, changeItem, removeItem } from "../store/shoppingCartSlice";
 import { Card, Button } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp, faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 interface BasketItemProps {
-  item: {
-    id: number;
-    name: string;
-    price: number;
-    img: string;
-  };
+  item: Item;
   quantity: number;
 }
 

@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { calculateTotals } from "./store/shoppingCartSlice";
 import { Container } from "react-bootstrap";
 import Header from "./components/Header";
@@ -17,7 +17,7 @@ export default function App() {
 
   useEffect(() => {
     dispatch(calculateTotals());
-  }, [items]);
+  }, [dispatch, items]);
 
   return (
     <>

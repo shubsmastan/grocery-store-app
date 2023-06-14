@@ -4,13 +4,25 @@ import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { clearItems } from "../store/shoppingCartSlice";
 import { Button } from "react-bootstrap";
+import { RootState } from "../store/store";
 
 export default function Basket() {
   const dispatch = useDispatch();
 
-  const { items, totalItems, totalCost } = useSelector(
-    (state) => state.shoppingCart
+  const { items, totalCost } = useSelector(
+    (state: RootState) => state.shoppingCart
   );
+
+  const itemsList = items.map((item) => {
+    const foundItem = items.find((cartItem) => item.id === cartItem.id);
+    return (
+      <BasketItem
+        key={item.id}
+        item={item}
+        quantity={foundItem ? foundItem.quantity : 0}
+      />
+    );
+  });
 
   return (
     <main>
@@ -18,17 +30,7 @@ export default function Basket() {
       <div>
         {items.length > 0 ? (
           <>
-            {items.map((item) => (
-              <BasketItem
-                key={item.id}
-                item={item}
-                quantity={
-                  items.find((cartItem) => item.id === cartItem.id)
-                    ? items.find((cartItem) => item.id === cartItem.id).quantity
-                    : 0
-                }
-              />
-            ))}
+            {itemsList}
             <hr />
             <div className="d-flex justify-content-between mb-3">
               <h4>Total</h4>
@@ -38,8 +40,7 @@ export default function Basket() {
               <Button
                 variant="outline-danger"
                 className="d-block"
-                onClick={() => dispatch(clearItems())}
-              >
+                onClick={() => dispatch(clearItems())}>
                 Remove All
               </Button>
               <Checkout total={totalCost} />
@@ -48,18 +49,17 @@ export default function Basket() {
         ) : (
           <>
             <h4 className="text-center mb-4">No items in your basket</h4>
-            <Button
-              variant="outline-secondary"
-              as={Link}
-              to="/shop"
-              style={{
-                display: "block",
-                maxWidth: "200px",
-                margin: "auto",
-              }}
-            >
-              Continue Shopping
-            </Button>
+            <Link style={{ textDecoration: "none" }} to="/shop">
+              <Button
+                variant="outline-secondary"
+                style={{
+                  display: "block",
+                  maxWidth: "200px",
+                  margin: "auto",
+                }}>
+                Continue Shopping
+              </Button>
+            </Link>
           </>
         )}
       </div>

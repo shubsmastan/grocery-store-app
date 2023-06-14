@@ -1,20 +1,15 @@
 import { useDispatch } from "react-redux";
-import { changeItem, removeItem } from "../store/shoppingCartSlice";
+import { Item, changeItem, removeItem } from "../store/shoppingCartSlice";
 import { Card, Button } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCirclePlus, faCircleMinus } from "@fortawesome/free-solid-svg-icons";
 
 interface ShopItemProps {
-  item: {
-    id: number;
-    name: string;
-    price: number;
-    img: string;
-  };
+  item: Item;
   quantity: number;
 }
 
-export default function Item({ item, quantity }: ShopItemProps) {
+export default function ShopItem({ item, quantity }: ShopItemProps) {
   const { id, name, price, img } = item;
   const dispatch = useDispatch();
 
